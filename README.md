@@ -2,10 +2,10 @@
 Find new gems checking github API REST filters with python.
 
 # Prerequisites:
-pip install prettytable
+$ pip install prettytable
 
 # Run python script
-python3 gemfinder.py
+$ python3 gemfinder.py
 
 +----------------------------------------------------+----------------------+----------------------+------------------+-------+
 |                  Repository Name                   |     Created Date     |       Updated        |     Language     | Stars |
