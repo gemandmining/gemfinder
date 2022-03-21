@@ -2,7 +2,7 @@ import requests
 from prettytable import PrettyTable
 
 table = PrettyTable()
-table.field_names = ["Description", "Url", "Created Date", "Updated", "Language", "Stars"]
+table.field_names = ["Url", "Created Date", "Updated", "Language", "Stars"]
 
 #query= "cryptocurrency+language:assembly&sort=stars&order=desc"
 query= "cryptocurrency+stars:0..30"
@@ -11,7 +11,9 @@ query= "cryptocurrency+stars:0..30"
 
 #search for the top repositories
 #api_url = "https://api.github.com/search/repositories?q={query}&{page}"
-url = 'https://api.github.com/search/repositories?q=cryptocurrency+stars:<10&sort=stars&order=asc&per_page=100'
+#Filtrado por stars < 5
+#api_url = url = 'https://api.github.com/search/repositories?q=language:C%2B%2B+topic:cryptocurrency+stars:<5&sort=updated&per_page=10'
+url = 'https://api.github.com/search/repositories?q=language:C%2B%2B+cryptocurrency+stars:<5&sort=updated&per_page=20'
 
 #send get request
 response = requests.get(url)
@@ -21,13 +23,13 @@ data =  response.json()
 
 for repository in data["items"]:
     #name = repository["full_name"]
-    description = repository["description"]
+    #description = repository["description"]
     created_date = repository["created_at"]
     recently_updated = repository["updated_at"]
     url = repository["html_url"]
     language = repository["language"]
     stars = repository["stargazers_count"]
     
-    table.add_row([description, url ,created_date, recently_updated, language, stars])
+    table.add_row([url ,created_date, recently_updated, language, stars])
 
 print(table)
