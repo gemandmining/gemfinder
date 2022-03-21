@@ -7,6 +7,8 @@ $ pip install prettytable
 # Run python script
 $ python3 gemfinder.py
 
+
+|-----------------------------------------------------|----------------------|----------------------|----------|-------|
 |                         Url                         |     Created Date     |       Updated        | Language | Stars |
 |----------------------------------------------------------------------------------------------------------------------|
 |    https://github.com/Bitcoin-Foundations/bitcoin   | 2022-01-25T15:31:49Z | 2022-03-01T15:16:06Z |   C++    |   1   |
@@ -19,3 +21,4 @@ $ python3 gemfinder.py
 |     https://github.com/willholl4nd/CryptoService    | 2021-08-04T04:47:33Z | 2021-12-24T06:45:02Z |   C++    |   0   |
 |    https://github.com/FullSendMCdev/FullSendCoin    | 2022-03-19T16:19:39Z | 2022-03-19T20:34:16Z |   C++    |   0   |
 |      https://github.com/PutinCoinPUT/PutinCoin      | 2020-07-08T06:54:15Z | 2022-03-19T13:05:12Z |   C++    |   1   |
+|-----------------------------------------------------|----------------------|----------------------|----------|-------|
